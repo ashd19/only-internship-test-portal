@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyInternship.in - Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .btn-primary { @apply bg-[#2C3E50] text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 shadow-lg; }
+        .btn-secondary { @apply bg-[#E74C3C] text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300 shadow-lg; }
+        .card { @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100; }
+    </style>
+</head>
+<body class="bg-[#ECF0F1]">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-graduation-cap text-3xl text-[#2C3E50] mr-3"></i>
+                    <div>
+                        <h1 class="text-2xl font-bold text-[#2C3E50]">OnlyInternship.in</h1>
+                        <p class="text-sm text-gray-600">Yuga Yatra Retail (OPC) Private Limited</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <button onclick="showSection('home')" class="text-[#2C3E50] hover:text-[#E74C3C] transition-colors">Home</button>
+                    <button onclick="showSection('student')" class="text-[#2C3E50] hover:text-[#E74C3C] transition-colors">Student Login</button>
+                    <button onclick="showSection('admin')" class="text-[#2C3E50] hover:text-[#E74C3C] transition-colors">Admin Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="py-20 bg-gradient-to-br from-[#2C3E50] to-[#E74C3C] text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Online Internship Test Platform
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    Take your internship assessment online with our secure, proctored testing platform. 
+                    Get instant results and merit-based rankings.
+                </p>
+                
+                <!-- Test Info Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <i class="fas fa-clock text-3xl mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">35 Questions</h3>
+                        <p class="text-sm opacity-90">Comprehensive assessment</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <i class="fas fa-clock text-3xl mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">30 Minutes</h3>
+                        <p class="text-sm opacity-90">Timed assessment</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <i class="fas fa-credit-card text-3xl mx-auto mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">₹250 + GST</h3>
+                        <p class="text-sm opacity-90">One-time fee</p>
+                    </div>
+                </div>
+
+                <!-- Login Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <button onclick="showSection('student')" class="btn-primary bg-white text-[#2C3E50] flex items-center space-x-3">
+                        <i class="fas fa-user-graduate text-2xl"></i>
+                        <span>Student Login</span>
+                    </button>
+                    <button onclick="showSection('admin')" class="btn-secondary flex items-center space-x-3">
+                        <i class="fas fa-user-shield text-2xl"></i>
+                        <span>Admin Login</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-[#2C3E50] mb-16">
+                    Why Choose OnlyInternship.in?
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-[#2C3E50] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#2C3E50] mb-4">Secure OTP Authentication</h3>
+                        <p class="text-gray-600">
+                            Email-based OTP verification ensures secure access to your test account.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-[#E74C3C] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#2C3E50] mb-4">Anti-Cheating System</h3>
+                        <p class="text-gray-600">
+                            Advanced monitoring prevents cheating with 3-strike warning system.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-[#27AE60] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-credit-card text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#2C3E50] mb-4">Razorpay Integration</h3>
+                        <p class="text-gray-600">
+                            Secure payment gateway with GST compliance and instant processing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Login Section -->
+    <section id="student" class="section hidden">
+        <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-md w-full space-y-8">
+                <div class="text-center">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-[#2C3E50] text-white p-3 rounded-full">
+                            <i class="fas fa-user-graduate text-3xl"></i>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-3xl font-bold text-[#2C3E50] mb-2">
+                        Student Login
+                    </h2>
+                    <p class="text-gray-600">
+                        Enter your email to receive OTP
+                    </p>
+                </div>
+
+                <div class="card">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Email Address
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-envelope h-5 w-5 text-gray-400"></i>
+                                </div>
+                                <input
+                                    type="email"
+                                    class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2C3E50] focus:border-transparent"
+                                    placeholder="Enter your email address"
+                                />
+                            </div>
+                        </div>
+
+                        <button type="button" onclick="simulateOTP()" class="btn-primary w-full flex justify-center items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Send OTP
+                        </button>
+                    </form>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-sm text-gray-600">
+                        Don't have an account? Registration is automatic with email verification
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Login Section -->
+    <section id="admin" class="section hidden">
+        <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-md w-full space-y-8">
+                <div class="text-center">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-[#E74C3C] text-white p-3 rounded-full">
+                            <i class="fas fa-user-shield text-3xl"></i>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-3xl font-bold text-[#2C3E50] mb-2">
+                        Admin Login
+                    </h2>
+                    <p class="text-gray-600">
+                        Access the admin dashboard to manage tests and candidates
+                    </p>
+                </div>
+
+                <div class="card">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Username
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-user h-5 w-5 text-gray-400"></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2C3E50] focus:border-transparent"
+                                    placeholder="Enter your username"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Password
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-lock h-5 w-5 text-gray-400"></i>
+                                </div>
+                                <input
+                                    type="password"
+                                    class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2C3E50] focus:border-transparent"
+                                    placeholder="Enter your password"
+                                />
+                            </div>
+                        </div>
+
+                        <button type="button" onclick="simulateAdminLogin()" class="btn-secondary w-full flex justify-center items-center">
+                            <i class="fas fa-user-shield mr-2"></i>
+                            Sign In
+                        </button>
+                    </form>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 class="text-sm font-medium text-yellow-800 mb-2">Demo Credentials</h3>
+                    <div class="text-xs text-yellow-700 space-y-1">
+                        <p><strong>Username:</strong> admin</p>
+                        <p><strong>Password:</strong> admin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2C3E50] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">OnlyInternship.in</h3>
+                    <p class="text-gray-300 text-sm">
+                        Online internship test platform by Yuga Yatra Retail (OPC) Private Limited.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-300 text-sm">
+                        Email: support@onlyinternship.in<br />
+                        GST Compliant Platform<br />
+                        © 2024 Yuga Yatra Retail (OPC) Private Limited
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        function simulateOTP() {
+            alert('OTP sent to your email! (Demo mode)\n\nIn the full version, this would:\n1. Send OTP to the entered email\n2. Verify OTP\n3. Create/Login student account\n4. Redirect to student dashboard');
+        }
+
+        function simulateAdminLogin() {
+            alert('Admin login successful! (Demo mode)\n\nIn the full version, this would:\n1. Verify admin credentials\n2. Redirect to admin dashboard\n3. Show test management options\n4. Display candidate analytics');
+        }
+
+        // Show home section by default
+        showSection('home');
+    </script>
+</body>
+</html> 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2C3E50" />
+    <meta
+      name="description"
+      content="OnlyInternship.in - Online Internship Test Platform by Yuga Yatra Retail (OPC) Private Limited"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Prevent Screenshots and Right Click -->
+    <script>
+      // Disable right click
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+      
+      // Disable keyboard shortcuts for screenshots
+      document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u')) {
+          e.preventDefault();
+        }
+        if (e.key === 'F12') {
+          e.preventDefault();
+        }
+      });
+      
+      // Disable text selection during test
+      function disableTextSelection() {
+        document.body.style.userSelect = 'none';
+        document.body.style.webkitUserSelect = 'none';
+        document.body.style.mozUserSelect = 'none';
+        document.body.style.msUserSelect = 'none';
+      }
+      
+      // Enable text selection when not in test
+      function enableTextSelection() {
+        document.body.style.userSelect = 'auto';
+        document.body.style.webkitUserSelect = 'auto';
+        document.body.style.mozUserSelect = 'auto';
+        document.body.style.msUserSelect = 'auto';
+      }
+    </script>
+    
+    <title>OnlyInternship.in - Online Test Platform</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html> 

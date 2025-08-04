@@ -1,0 +1,282 @@
+/* Custom Cursor Theme for Yuga Yatra Retail */
+/* Using Exact Yuga Yatra Logo with Original Colors */
+
+/* Base cursor styles */
+/* Removed cursor: none to allow default cursor visibility */
+
+/* Global override to ensure cursor is visible */
+.custom-cursor {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: fixed !important;
+  z-index: 999999 !important;
+  pointer-events: none !important;
+}
+
+/* Custom cursor container */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 99999; /* Ensure highest z-index */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+  /* Debug: Add border to see cursor area */
+  /* border: 1px solid red; */
+}
+
+/* Logo cursor styles */
+.custom-cursor .yuga-yatra-logo {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  /* Ensure SVG is visible */
+  display: block;
+  opacity: 1;
+}
+
+/* Default state - Original gold logo */
+.custom-cursor .yuga-yatra-logo {
+  color: #D4AF37;
+}
+
+/* Hover state - White-glow version at 28x28px */
+.custom-cursor.hover {
+  width: 28px;
+  height: 28px;
+  filter: 
+    drop-shadow(0 6px 12px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 4px 8px rgba(255, 255, 255, 0.7))
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transform: scale(1.05);
+}
+
+.custom-cursor.hover .yuga-yatra-logo {
+  filter: 
+    drop-shadow(0 2px 4px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 1px 2px rgba(212, 175, 55, 0.8));
+}
+
+/* Loading state - Spinning gold logo */
+.custom-cursor.loading {
+  width: 32px;
+  height: 32px;
+  filter: 
+    drop-shadow(0 8px 16px rgba(212, 175, 55, 0.8))
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.custom-cursor.loading .yuga-yatra-logo {
+  animation: logo-spin 1.5s linear infinite;
+  filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.6));
+}
+
+/* Click state - Compressed with enhanced glow */
+.custom-cursor.clicking {
+  transform: scale(0.95);
+  filter: 
+    drop-shadow(0 8px 16px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 4px 8px rgba(212, 175, 55, 0.7))
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.custom-cursor.clicking .yuga-yatra-logo {
+  filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 1));
+}
+
+/* Text selection cursor - Gold vertical line */
+.custom-cursor.text {
+  width: 3px;
+  height: 20px;
+  background: linear-gradient(135deg, #D4AF37, #FFD700);
+  border-radius: 2px;
+  box-shadow: 
+    0 0 8px rgba(212, 175, 55, 0.8),
+    0 0 16px rgba(212, 175, 55, 0.4);
+}
+
+.custom-cursor.text .yuga-yatra-logo {
+  display: none;
+}
+
+/* Disabled state */
+.custom-cursor.disabled {
+  opacity: 0.6;
+  filter: grayscale(0.8) brightness(0.8);
+}
+
+/* Pulsating animation for luxury feel */
+.custom-cursor.pulse {
+  animation: logo-pulse 2.5s ease-in-out infinite;
+}
+
+/* Logo animations */
+@keyframes logo-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes logo-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: 
+      drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15))
+      drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: 
+      drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2))
+      drop-shadow(0 4px 8px rgba(212, 175, 55, 0.5));
+  }
+}
+
+/* Logo element animations */
+.yuga-yatra-logo.animated .outer-circle {
+  animation: circle-dash 4s linear infinite;
+}
+
+.yuga-yatra-logo.animated .y-shapes {
+  animation: y-bounce 3s ease-in-out infinite;
+}
+
+.yuga-yatra-logo.animated .pillar {
+  animation: pillar-glow 3.5s ease-in-out infinite;
+}
+
+.yuga-yatra-logo.animated .logo-background {
+  animation: background-pulse 4s ease-in-out infinite;
+}
+
+@keyframes circle-dash {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -48; }
+}
+
+@keyframes y-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+@keyframes pillar-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes background-pulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.95; }
+}
+
+/* Smooth transitions for all cursor states */
+.custom-cursor,
+.custom-cursor .yuga-yatra-logo {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Interactive elements - now using default cursor */
+button,
+a,
+input,
+textarea,
+select,
+[role="button"],
+[tabindex],
+.clickable {
+  /* Using default cursor */
+}
+
+/* Enhanced visibility against all backgrounds */
+.custom-cursor {
+  /* Ensure visibility on light backgrounds */
+  filter: 
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15))
+    drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3))
+    drop-shadow(0 1px 2px rgba(255, 255, 255, 0.8));
+}
+
+.custom-cursor .yuga-yatra-logo {
+  /* Additional white outline for contrast */
+  filter: 
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 2px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
+/* Enable default cursor for all devices since custom cursor is disabled */
+* {
+  cursor: auto !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .custom-cursor .yuga-yatra-logo {
+    filter: 
+      drop-shadow(0 0 2px rgba(0, 0, 0, 1))
+      drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
+  }
+  
+  .custom-cursor.hover .yuga-yatra-logo {
+    filter: 
+      drop-shadow(0 0 3px rgba(255, 255, 255, 1))
+      drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+  }
+  
+  .custom-cursor {
+    filter: 
+      drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8))
+      drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+  }
+  
+  .custom-cursor.hover {
+    filter: 
+      drop-shadow(0 6px 12px rgba(255, 255, 255, 0.9))
+      drop-shadow(0 4px 8px rgba(255, 255, 255, 0.7));
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor,
+  .custom-cursor .yuga-yatra-logo {
+    transition: none;
+  }
+  
+  .custom-cursor.loading .yuga-yatra-logo {
+    animation: none;
+  }
+  
+  .custom-cursor.pulse {
+    animation: none;
+  }
+  
+  .yuga-yatra-logo.animated .outer-circle,
+  .yuga-yatra-logo.animated .y-shapes,
+  .yuga-yatra-logo.animated .pillar,
+  .yuga-yatra-logo.animated .logo-background {
+    animation: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .custom-cursor .yuga-yatra-logo {
+    filter: 
+      drop-shadow(0 0 2px rgba(255, 255, 255, 0.3))
+      drop-shadow(0 2px 4px rgba(212, 175, 55, 0.4));
+  }
+  
+  .custom-cursor.hover .yuga-yatra-logo {
+    filter: 
+      drop-shadow(0 0 4px rgba(255, 255, 255, 0.6))
+      drop-shadow(0 2px 4px rgba(212, 175, 55, 0.7));
+  }
+}
+
+ 

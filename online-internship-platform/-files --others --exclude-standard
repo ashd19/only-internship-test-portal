@@ -1,0 +1,18 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/HomePage.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/admin/AdminDashboard.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/common/CursorDemo.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/common/CustomCursor.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/index.css', LF will be replaced by CRLF the next time Git touches it
+README.md
+src/App.js
+src/components/Footer.js
+src/components/HomePage.js
+src/components/admin/AdminDashboard.js
+src/components/auth/AdminLogin.js
+src/components/common/CursorDemo.js
+src/components/common/CustomCursor.js
+src/components/payment/PaymentPage.js
+src/contexts/AuthContext.js
+src/index.css
