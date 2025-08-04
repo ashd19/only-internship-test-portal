@@ -123,10 +123,7 @@ src/
 
 This project is licensed under the MIT License.
 
-## 👨‍💻 Author
 
-**Ruchithamula**
-- GitHub: [@Ruchithamula](https://github.com/Ruchithamula)
 
 ## 🙏 Acknowledgments
 
