@@ -16,6 +16,7 @@ import TermsAgreement from './components/common/TermsAgreement';
 import TermsAndConditions from './components/common/TermsAndConditions';
 import PaymentPage from './components/payment/PaymentPage';
 import ProtectedRoute from './components/common/ProtectedRoute';
+
 // Styles
 import './index.css';
 

@@ -5,6 +5,9 @@
 /* Import custom cursor styles */
 @import './styles/cursor.css';
 
+/* Import custom chatbot styles */
+@import './styles/chatbot.css';
+
 /* Custom Cursor Styles */
 .custom-cursor {
   position: fixed;

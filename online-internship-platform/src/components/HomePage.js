@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaGraduationCap, FaUserShield, FaClock, FaBars, FaTimes } from 'react-icons/fa';
 import { MdPayment } from 'react-icons/md';
 import YugaYatraLogo from './common/YugaYatraLogo';
-
+import ChatBot from './chatbot.js';
 const HomePage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -11,8 +11,11 @@ const HomePage = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+ 
   return (
     <div className="min-h-screen bg-white">
+      
+
       {/* Header - Fixed across all pages */}
       <header className="bg-white shadow-lg border-b-2 border-gold-200 fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,7 +94,8 @@ const HomePage = () => {
           )}
         </div>
       </header>
-
+        
+        <ChatBot />
       {/* Hero Section - Matching Yuga Yatra Retail style */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-gold-50 via-white to-gold-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-gold-200/20 to-transparent"></div>
